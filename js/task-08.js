@@ -8,10 +8,11 @@ const onFormSubmit = event => {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    alert("Все поля должны быть заполнены");
+    return alert("Все поля должны быть заполнены");
   }
-
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  
+  const obj = {email: email.value, Password: password.value};
+  console.log(obj);
 
   event.currentTarget.reset();
 }
